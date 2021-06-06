@@ -6,17 +6,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      description: "クリック前の表示",
       tab: 'list',
     }
   }
-  changeDescription() {
-    this.setState({
-      description: "クリック後の表示です。"
-    })
-  }
   render() {
-    const { tab, description } = this.state;
+    const { tab } = this.state;
     return (
       <div>
         <header>
@@ -36,15 +30,11 @@ class App extends React.Component {
           </ul>
         </header>
         <hr />
-        { description }
         {
           tab === "list" ?
-            <List title="取り扱い言語一覧" /> :
+            <List /> :
             <Form />
         }
-        <button onClick={() => this.changeDescription()}>
-          ボタン
-        </button>
       </div>
     )
   }
