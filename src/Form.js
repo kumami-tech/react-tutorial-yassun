@@ -1,13 +1,14 @@
 import { useState } from 'react';
 
-export const Form = () => {
+export const Form = ({ onAddLang }) => {
   const [text, setText] = useState('');
+
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(text);
+    onAddLang(text);
   }
 
-  return(
+  return (
     <div>
       <h4>新しい言語の追加</h4>
       <form onSubmit={submitForm}>
