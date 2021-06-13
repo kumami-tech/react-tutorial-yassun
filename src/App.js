@@ -4,10 +4,11 @@ import { List } from "./List";
 import { Form } from "./Form";
 import { getLanguages } from './const/languages';
 import { withLoading } from './hoc/withLoading';
+import { Modal } from './components/modal';
 
 const Header = styled.header`
   display: flex;
-  justify-coontent: space-between;
+  justify-content: space-between;
   padding: 24px 64px 0;
   border-bottom: 1px solid #E0E0E0;
 
@@ -48,4 +49,4 @@ function App({ data }) {
   );
 }
 
-export default withLoading(App, getLanguages);
+export default withLoading(App, getLanguages)
